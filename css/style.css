@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-    height: calc(100vh - 128px);
+    height: calc(100vh - 64px);
     overflow: auto;
 }
 
