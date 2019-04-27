@@ -39,9 +39,16 @@ h1, h2, h3, h4, h5, h6 {
     height: 64px;
 }
 
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 main {
-    height: calc(100vh - 64px);
-    overflow: auto;
+    margin-top: 64px;
 }
 
 .site-footer {
