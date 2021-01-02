@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<router-view/>
+		<router-view />
 	</div>
 </template>
 
@@ -21,17 +21,38 @@ export default {
 </script>
 
 <style lang="scss">
-html,
-body,
-#app {
-	height: 100%;
-	overflow-x: hidden;
-}
-
 body {
 	color: #232323;
 	background: #232323;
-	font-family: "Fira Sans", sans-serif;
+	font-family: sans-serif;
+}
+
+#app {
+	overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+	#app {
+		min-height: 100vh;
+	}
+}
+
+@media (min-width: 768px) {
+	#app {
+		height: 100vh;
+	}
+
+	.site-header {
+		max-width: 450px;
+	}
+}
+
+.loading {
+	margin-top: 150px;
+}
+
+a {
+	transition: color 0.3s;
 }
 
 a,
@@ -43,8 +64,24 @@ a,
 	color: #979797;
 }
 
+.cgx-bg-grey {
+	background: #979797;
+}
+
+.cgx-light-grey {
+	color: #e0e0e0;
+}
+
+.cgx-bg-light-grey {
+	background: #e0e0e0;
+}
+
 .cgx-white {
 	color: #e9eef3;
+}
+
+.cgx-bg-white {
+	background: #e9eef3;
 }
 
 h1,
@@ -54,13 +91,16 @@ h4,
 h5,
 h6,
 .logo {
-	font-family: "Fira Code", monospace;
+	font-family: monospace;
 }
 
 .logo {
 	font-size: 2.75rem;
 	.cgx-blue {
 		font-size: 90%;
+	}
+	a {
+		text-decoration: none;
 	}
 }
 
@@ -90,5 +130,28 @@ h6,
 		}
 		@extend .cgx-grey;
 	}
+}
+
+.post-wrapper {
+	overflow-y: auto;
+	min-height: calc(100vh - 196px);
+}
+
+.post {
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.date,
+.tag {
+	font-size: 0.8rem;
+	color: #808080;
+	text-decoration: none;
+}
+
+.back-to-posts {
+	font-family: monospace;
+	font-size: 3rem;
+	text-decoration: none;
 }
 </style>
