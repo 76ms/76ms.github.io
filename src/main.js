@@ -23,6 +23,9 @@ function getDate (dateStr) {
 }
 Vue.prototype.$date = getDate;
 
+import DOMPurify from 'dompurify';
+Vue.prototype.$sanitise = DOMPurify.sanitize;
+
 new Vue({
   router,
   store,

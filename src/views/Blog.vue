@@ -69,7 +69,7 @@ export default {
 		}
 	},
 	methods: {
-		goHome () {
+		setup () {
 			// Bail if the tag or slug doesn't return any posts
 			if(
 				(this.tag && !this.posts.length) ||
@@ -77,17 +77,23 @@ export default {
 			) {
 				this.$router.push({path: '/'});
 			}
+
+			// Update the page title
+			const baseTitle = 'Corgux | UI, UX, web design';
+			if(this.slug) document.title = `${ this.post.title } | ${ baseTitle }`;
+			if(this.tag) document.title = `Tag: ${ this.$unhyphenate(this.tag) } | ${ baseTitle }`;
+
 		}
 	},
 	watch: {
 		tag () {
-			this.goHome();
+			this.setup();
 		},
 		slug () {
-			this.goHome();
+			this.setup();
 		},
 		posts () {
-			this.goHome();
+			this.setup();
 		}
 	}
 }
