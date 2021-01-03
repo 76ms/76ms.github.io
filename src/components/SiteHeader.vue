@@ -1,12 +1,12 @@
 <template>
 	<div class="row">
-		<div class="d-none d-md-block col-12 text-center">
+		<div class="d-none d-lg-block col-12 text-center">
 			<Projects />
 		</div>
 		<div class="col-12">
 			<CorguxLogo />
 		</div>
-		<div class="d-none d-md-block col-12 text-center">
+		<div class="d-none d-lg-block col-12 text-center">
 			<Profiles />
 		</div>
 	</div>

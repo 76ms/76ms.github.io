@@ -1,10 +1,10 @@
 <template>
 	<div class="row h-100">
-		<header class="col-12 col-md order-md-last d-block d-md-flex align-items-center site-header">
+		<header class="col-12 col-lg order-lg-last d-block d-lg-flex align-items-center site-header">
 			<SiteHeader />
 		</header>
 		<main class="col cgx-bg-white post-wrapper h-100">
-			<div class="pt-5 pb-5 px-4 px-md-5">
+			<div class="pt-5 pb-5 px-4 px-lg-5">
 				<template v-if="$store.state.posts.length">
 					<AllPosts v-if="!slug" :tag="tag" />
 					<SinglePost v-if="slug" :post="post" />
@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		</main>
-		<footer class="col-12 d-md-none text-center py-3">
+		<footer class="col-12 d-lg-none text-center py-3">
 			<div class="mb-3">
 				<Profiles />
 			</div>

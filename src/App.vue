@@ -14,7 +14,13 @@ export default {
 				if(!data.val()) return;
 				// Change to array of objects
 				const arr = Object.entries(data.val());
-				this.$store.commit('posts', arr.map(item => item[1]));
+				this.$store.commit(
+					'posts',
+					arr
+						.map(item => item[1])
+						.filter(post => !post.draft)
+						.sort((a, b) => (a.id < b.id) ? 1 : ((b.id < a.id) ? -1 : 0))
+				);
 			});
 	}
 }
@@ -31,13 +37,13 @@ body {
 	overflow-x: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	#app {
 		min-height: 100vh;
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	#app {
 		height: 100vh;
 	}
@@ -138,20 +144,14 @@ h6,
 }
 
 .post {
-	margin-top: 50px;
-	margin-bottom: 100px;
+	margin: 50px auto 100px;
+	max-width: 600px;
 }
 
 .date,
 .tag {
 	font-size: 0.8rem;
 	color: #808080;
-	text-decoration: none;
-}
-
-.back-to-posts {
-	font-family: monospace;
-	font-size: 3rem;
 	text-decoration: none;
 }
 </style>
