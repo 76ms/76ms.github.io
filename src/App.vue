@@ -146,6 +146,12 @@ h6,
 .post {
 	margin: 50px auto 100px;
 	max-width: 600px;
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .date,
