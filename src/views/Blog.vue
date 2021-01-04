@@ -63,7 +63,17 @@ export default {
 	computed: {
 		posts () {
 			// return this.$store.state.posts;
-			return !this.tag ? this.$store.state.posts : this.$store.state.posts.filter(post => post.tags.includes(this.$unhyphenate(this.tag)));
+			return !this.tag ?
+				this.$store.state.posts :
+				this.$store.state.posts.filter(post => {
+					let match = false;
+					post.tags.forEach(tag => {
+						if(tag.toLowerCase() == this.$unhyphenate(this.tag)) {
+							match = true;
+						}
+					})
+					return match;
+				});
 		},
 		post () {
 			if(!this.$store.state.posts.length) return false;
