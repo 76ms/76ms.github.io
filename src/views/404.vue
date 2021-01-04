@@ -5,24 +5,10 @@
 		</header>
 		<main class="col cgx-bg-white post-wrapper h-100">
 			<div class="pt-5 pb-5 px-4 px-lg-5">
-				<template v-if="$store.state.posts.length">
-					<p v-if="tag && !errorPage" class="cgx-max-width mb-5">Tag: {{ tag }}</p>
-					<AllPosts v-if="!slug" :posts="posts" />
-					<SinglePost v-if="slug && post" :post="post" />
-				</template>
-				<div v-else class="text-center loading">
-					Loading...
-				</div>
-				<div v-if="errorPage" class="cgx-max-width">
-					<p v-if="tag">Sorry, no posts for the tag &quot;{{ tag }}&quot;.</p>
-					<p v-if="slug">Sorry, that post doesn't exist.</p>
-					<router-link
-						to="/"
-						class="d-block mb-5 cgx-grey text-decoration-none"
-					>
-						<span class="fa fa-angle-left"></span> <small>All posts</small>
-					</router-link>
-				</div>
+				<h1>404</h1>
+				<p>
+					Page not found.
+				</p>
 			</div>
 		</main>
 		<footer class="col-12 d-lg-none text-center py-3">
@@ -36,8 +22,6 @@
 
 <script>
 import SiteHeader from '@/components/SiteHeader.vue'
-import AllPosts from '@/components/AllPosts.vue'
-import SinglePost from '@/components/SinglePost.vue'
 import Projects from '@/components/Projects.vue'
 import Profiles from '@/components/Profiles.vue'
 
@@ -45,8 +29,6 @@ export default {
 	name: 'Blog',
 	components: {
 		SiteHeader,
-		AllPosts,
-		SinglePost,
 		Projects,
 		Profiles
 	},
@@ -62,8 +44,7 @@ export default {
 	},
 	computed: {
 		posts () {
-			// return this.$store.state.posts;
-			return !this.tag ? this.$store.state.posts : this.$store.state.posts.filter(post => post.tags.includes(this.$unhyphenate(this.tag)));
+			return this.$store.state.posts;
 		},
 		post () {
 			if(!this.$store.state.posts.length) return false;
@@ -78,15 +59,18 @@ export default {
 			const day = date.getDate() < 10 ? `0${ date.getDate() }` : date.getDate();
 			const month = date.toLocaleString('default', {month: 'short'});
 			return `${ day } ${ month } ${ date.getFullYear() }`;
-		},
-
-		errorPage () {
-			if(this.$store.state.loading) return false;
-			return (this.tag && !this.posts.length) || (this.slug && !this.post);
 		}
 	},
 	methods: {
 		setup () {
+			// Bail if the tag or slug doesn't return any posts
+			if(
+				(this.tag && !this.posts.length) ||
+				(this.slug && !this.post)
+			) {
+				this.$router.push({path: '/'});
+			}
+
 			// Update the page title
 			const baseTitle = 'Corgux | UI, UX, web design';
 			if(this.slug) document.title = `${ this.post.title } | ${ baseTitle }`;

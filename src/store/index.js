@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 	state: {
+		loading: true,
 		posts: [],
 		projects: [
 			{
@@ -62,6 +63,9 @@ export default new Vuex.Store({
 	mutations: {
 		posts (state, posts) {
 			state.posts = posts;
+		},
+		loading (state, loading) {
+			state.loading = loading;
 		},
 	},
 	actions: {

@@ -21,6 +21,7 @@ export default {
 						.filter(post => !post.draft)
 						.sort((a, b) => (a.id < b.id) ? 1 : ((b.id < a.id) ? -1 : 0))
 				);
+				this.$store.commit('loading', false);
 			});
 	}
 }
@@ -90,6 +91,11 @@ a,
 	background: #e9eef3;
 }
 
+.cgx-max-width {
+	max-width: 600px;
+	margin: 50px auto 100px;
+}
+
 h1,
 h2,
 h3,
@@ -144,8 +150,7 @@ h6,
 }
 
 .post {
-	margin: 50px auto 100px;
-	max-width: 600px;
+	@extend .cgx-max-width;
 
 	img {
 		display: block;

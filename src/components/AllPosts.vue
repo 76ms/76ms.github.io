@@ -20,14 +20,9 @@ export default {
 		Tags
 	},
 	props: {
-		tag: {
-			type: String,
-			required: false
-		}
-	},
-	computed: {
-		posts () {
-			return !this.tag ? this.$store.state.posts : this.$store.state.posts.filter(post => post.tags.includes(this.$unhyphenate(this.tag)));
+		posts: {
+			type: Array,
+			required: true
 		}
 	}
 }
