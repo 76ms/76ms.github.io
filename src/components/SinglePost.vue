@@ -9,7 +9,7 @@
 		<span class="date">{{ $date(post.date) }}</span>
 		<h2 class="cgx-blue mt-1 mb-4">{{ post.title }}</h2>
 		<Tags v-if="post.tags" :tags="post.tags" />
-		<div class="mt-5 pb-5 border-bottom border-secondary" v-html="formattedContent(post.content)"></div>
+		<div class="mt-5 pb-5 border-bottom border-secondary" v-html="formattedContent"></div>
 	</div>
 </template>
 
@@ -27,13 +27,15 @@ export default {
 			required: true
 		}
 	},
-	methods: {
-		formattedContent (content) {
+	computed: {
+		formattedContent () {
 
 			// Check for [image] shortcode
-			content = content
-				.replace(/\[image/, '<img')
-				.replace(/][/image]/, '>');
+			let content = this.post.content
+				.replace(/\[image/g, '<img')
+				.replace(/][/image]/g, '>')
+				.replace(/\[code]/g, '<code class="inline">')
+				.replace(/\[\/code]/g, '</code > ');
 
 			// Then $sanitise
 			return this.$sanitise(content);

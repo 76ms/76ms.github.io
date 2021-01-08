@@ -6,12 +6,15 @@ import store from './store'
 Vue.config.productionTip = false
 
 function hyphenate (str) {
-  return str.replace(/ /, '-').toLowerCase();
+  return str
+    .replace(/ /g, '-')
+    .replace(/'/g, '')
+    .toLowerCase();
 }
 Vue.prototype.$hyphenate = hyphenate;
 
 function unhyphenate (str) {
-  return str.replace(/-/, ' ').toLowerCase();
+  return str.replace(/-/g, ' ').toLowerCase();
 }
 Vue.prototype.$unhyphenate = unhyphenate;
 
