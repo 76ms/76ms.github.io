@@ -64,7 +64,7 @@ a {
 
 a,
 .cgx-blue {
-	color: #5e96ca;
+	color: #376fa4;
 }
 
 .cgx-grey {
@@ -81,6 +81,10 @@ a,
 
 .cgx-bg-light-grey {
 	background: #e0e0e0;
+}
+
+.cgx-dark-grey {
+	color: #5e5e5e;
 }
 
 .cgx-white {
@@ -162,7 +166,7 @@ h6,
 .date,
 .tag {
 	font-size: 0.8rem;
-	color: #808080;
+	color: #5e5e5e;
 	text-decoration: none;
 }
 </style>
