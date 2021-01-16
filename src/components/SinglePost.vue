@@ -30,12 +30,12 @@ export default {
 	computed: {
 		formattedContent () {
 
-			// Check for [image] shortcode
+			// Check for [image] and [code] shortcodes
 			let content = this.post.content
 				.replace(/\[image/g, '<img')
-				.replace(/][/image]/g, '>')
-				.replace(/\[code]/g, '<code class="bg-white px-1">')
-				.replace(/\[\/code]/g, '</code> ');
+				.replace(/\]\[\/image\]/g, '>')
+				.replace(/\[code\]/g, '<code class="bg-white px-1">')
+				.replace(/\[\/code\]/g, '</code> ');
 
 			// Then $sanitise
 			return this.$sanitise(content);
