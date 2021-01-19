@@ -50,7 +50,7 @@ export default new Vuex.Store({
 			},
 			{
 				text: 'WordPress',
-				url: '//profiles.wordpress.org/corgux',
+				url: '//profiles.wordpress.org/corgux/#content-plugins',
 				icon: 'wordpress'
 			},
 			{
