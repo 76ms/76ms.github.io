@@ -34,11 +34,6 @@ export default new Vuex.Store({
 		],
 		profiles: [
 			{
-				text: 'Twitter',
-				url: '//twitter.com/corgux',
-				icon: 'twitter'
-			},
-			{
 				text: 'GitHub',
 				url: '//github.com/corgux',
 				icon: 'github'
