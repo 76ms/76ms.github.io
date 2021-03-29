@@ -9,6 +9,7 @@ function hyphenate (str) {
   return str
     .replace(/ /g, '-')
     .replace(/'/g, '')
+    .replace(/,/g, '')
     .toLowerCase();
 }
 Vue.prototype.$hyphenate = hyphenate;
