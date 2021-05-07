@@ -1,8 +1,6 @@
 <template>
     <div class="logo text-center my-2 my-lg-5">
-        <router-link to="/">
-            <span class="cgx-blue">&lt;</span><span class="cgx-white">corg</span><span class="cgx-grey">ux</span><span class="cgx-blue">&gt;</span>
-        </router-link>
+        <span class="cgx-blue">&lt;</span><span class="cgx-white">corg</span><span class="cgx-grey">ux</span><span class="cgx-blue">&gt;</span>
     </div>
 </template>
 

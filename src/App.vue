@@ -14,6 +14,11 @@ export default {
 body {
 	color: #232323;
 	background: #232323;
+	background: linear-gradient(
+		45deg,
+		rgba(35, 35, 35, 1) 0%,
+		rgba(50, 50, 50, 1) 100%
+	);
 	font-family: sans-serif;
 }
 
