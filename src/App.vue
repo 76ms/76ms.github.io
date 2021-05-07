@@ -17,12 +17,19 @@ body {
 	font-family: sans-serif;
 }
 
-#app {
-	overflow-x: hidden;
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 #app {
+	overflow-x: hidden;
 	height: 100vh;
+	animation: fade-in 2s;
 }
 
 a {
@@ -108,10 +115,15 @@ h6,
 	font-size: 1.3rem;
 
 	a {
+		text-decoration: none;
 		&:hover {
 			@extend .cgx-white;
 		}
 		@extend .cgx-grey;
+	}
+
+	.sr-only {
+		color: #232323;
 	}
 }
 </style>
