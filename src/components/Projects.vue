@@ -12,9 +12,33 @@
 <script>
 export default {
 	name: 'Projects',
-	computed: {
-		projects () {
-			return this.$store.state.projects;
+	data () {
+		return {
+			projects: [
+				{
+					text: 'WordMap',
+					url: '/word-map',
+					bullet: true
+				},
+				{
+					text: 'Safe Plants for Cats',
+					url: '/safe-plants-for-cats',
+					bullet: true
+				},
+				{
+					text: 'Gifstori',
+					url: '/gifstori'
+				},
+				{
+					text: 'PhotoViewer',
+					url: '/photos',
+					bullet: true
+				},
+				{
+					text: 'WordPress plugins',
+					url: '//profiles.wordpress.org/corgux/#content-plugins'
+				}
+			],
 		}
 	}
 }

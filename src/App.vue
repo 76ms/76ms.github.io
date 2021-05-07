@@ -6,24 +6,7 @@
 
 <script>
 export default {
-	mounted () {
-		firebase.database()
-			.ref('posts')
-			.once('value')
-			.then((data) => {
-				if(!data.val()) return;
-				// Change to array of objects
-				const arr = Object.entries(data.val());
-				this.$store.commit(
-					'posts',
-					arr
-						.map(item => item[1])
-						.filter(post => !post.draft)
-						.sort((a, b) => (a.id < b.id) ? 1 : ((b.id < a.id) ? -1 : 0))
-				);
-				this.$store.commit('loading', false);
-			});
-	}
+	name: 'App'
 }
 </script>
 
@@ -38,24 +21,8 @@ body {
 	overflow-x: hidden;
 }
 
-@media (max-width: 991px) {
-	#app {
-		min-height: 100vh;
-	}
-}
-
-@media (min-width: 992px) {
-	#app {
-		height: 100vh;
-	}
-
-	.site-header {
-		max-width: 450px;
-	}
-}
-
-.loading {
-	margin-top: 150px;
+#app {
+	height: 100vh;
 }
 
 a {
@@ -146,27 +113,5 @@ h6,
 		}
 		@extend .cgx-grey;
 	}
-}
-
-.post-wrapper {
-	overflow-y: auto;
-	min-height: calc(100vh - 196px);
-}
-
-.post {
-	@extend .cgx-max-width;
-
-	img {
-		display: block;
-		max-width: 100%;
-		height: auto;
-	}
-}
-
-.date,
-.tag {
-	font-size: 0.8rem;
-	color: #5e5e5e;
-	text-decoration: none;
 }
 </style>

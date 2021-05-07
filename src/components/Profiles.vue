@@ -12,9 +12,35 @@
 <script>
 export default {
 	name: 'Profiles',
-	computed: {
-		profiles () {
-			return this.$store.state.profiles;
+	data () {
+		return {
+			profiles: [
+				{
+					text: 'Twitter',
+					url: '//twitter.com/corgux',
+					icon: 'twitter'
+				},
+				{
+					text: 'GitHub',
+					url: '//github.com/corgux',
+					icon: 'github'
+				},
+				{
+					text: 'SoundCloud',
+					url: '//soundcloud.com/corgux',
+					icon: 'soundcloud'
+				},
+				{
+					text: 'WordPress',
+					url: '//profiles.wordpress.org/corgux/#content-plugins',
+					icon: 'wordpress'
+				},
+				{
+					text: 'CodePen',
+					url: '//codepen.io/corgux/',
+					icon: 'codepen'
+				}
+			]
 		}
 	}
 }
