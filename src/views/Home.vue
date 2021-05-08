@@ -1,10 +1,10 @@
 <template>
 	<main class="row h-100 align-items-center">
-		<div class="row wrapper">
-			<div class="col-12 text-center mb-3">
+		<div class="wrapper">
+			<div class="col-12 text-center">
 				<Projects />
 			</div>
-			<div class="col-12 mb-3">
+			<div class="col-12">
 				<CorguxLogo />
 			</div>
 			<div class="col-12 text-center">
