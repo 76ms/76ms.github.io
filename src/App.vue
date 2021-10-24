@@ -13,7 +13,9 @@ export default {
 <style lang="scss">
 body {
 	color: #232323;
-	background: #232323;
+	background: #232323 url("/triangles.png");
+	background-size: cover;
+	background-position: center;
 	font-family: sans-serif;
 }
 
@@ -42,7 +44,7 @@ a,
 }
 
 .cgx-grey {
-	color: #979797;
+	color: #575353;
 }
 
 .cgx-bg-grey {
@@ -62,7 +64,7 @@ a,
 }
 
 .cgx-white {
-	color: #e9eef3;
+	color: #6b7681;
 }
 
 .cgx-bg-white {
