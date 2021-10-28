@@ -6,7 +6,7 @@ module.exports = {
         config
             .plugin('html')
             .tap((args) => {
-                args[0].title = 'Corgux | Making stuff online';
+                args[0].title = 'idouxui';
                 return args;
             });
     }

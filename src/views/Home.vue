@@ -1,28 +1,28 @@
 <template>
 	<main class="row h-100 align-items-center">
 		<div class="wrapper">
-			<div class="col-12 text-center">
-				<Projects />
-			</div>
 			<div class="col-12">
-				<CorguxLogo />
+				<Logo />
 			</div>
 			<div class="col-12 text-center">
 				<Profiles />
+			</div>
+			<div class="col-12 text-center">
+				<Projects />
 			</div>
 		</div>
 	</main>
 </template>
 
 <script>
-import CorguxLogo from '@/components/CorguxLogo.vue'
+import Logo from '@/components/Logo.vue'
 import Projects from '@/components/Projects.vue'
 import Profiles from '@/components/Profiles.vue'
 
 export default {
 	name: 'Home',
 	components: {
-		CorguxLogo,
+		Logo,
 		Projects,
 		Profiles
 	}

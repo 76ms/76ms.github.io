@@ -4,7 +4,7 @@
             <a :href="project.url">
                 {{ project.text }}
             </a>
-            <span v-if="project.bullet">&bull;</span>
+            <span v-if="project.bullet" :class="{'hide-on-mobile': project.hideOnMobile}">&bull;</span>
         </span>		
     </div>
 </template>
@@ -23,20 +23,17 @@ export default {
 				{
 					text: 'Safe Plants for Cats',
 					url: '/safe-plants-for-cats',
-					bullet: true
+					bullet: true,
+					hideOnMobile: true
 				},
 				{
 					text: 'Gifstori',
-					url: '/gifstori'
+					url: '/gifstori',
+					bullet: true
 				},
 				{
 					text: 'PhotoViewer',
 					url: '/photos',
-					bullet: true
-				},
-				{
-					text: 'WordPress plugins',
-					url: '//profiles.wordpress.org/corgux/#content-plugins'
 				}
 			],
 		}

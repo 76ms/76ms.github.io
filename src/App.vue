@@ -13,7 +13,7 @@ export default {
 <style lang="scss">
 body {
 	color: #232323;
-	background: #232323 url("/triangles.png");
+	background: white url("/triangles.png");
 	background-size: cover;
 	background-position: center;
 	font-family: sans-serif;
@@ -99,12 +99,23 @@ h6,
 .projects {
 	@extend .cgx-grey;
 
-	max-width: 300px;
+	max-width: 240px;
+	.hide-on-mobile {
+		display: none;
+	}
+
+	@media (min-width: 500px) {
+		max-width: 360px;
+		.hide-on-mobile {
+			display: initial;
+		}
+	}
 
 	a {
 		text-decoration: none;
 		font-size: 0.9rem;
 		transition: color 0.3s;
+		text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
 		&:hover {
 			@extend .cgx-white;
 		}

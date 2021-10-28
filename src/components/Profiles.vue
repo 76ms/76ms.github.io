@@ -1,5 +1,5 @@
 <template>
-    <div class="profiles m-auto">
+    <div class="profiles mx-auto mb-4">
         <span v-for="profile in profiles" :key="profile.text">
             <a :href="profile.url" class="mx-3">
                 <span :class="'fa fa-' + profile.icon"></span>
@@ -17,27 +17,22 @@ export default {
 			profiles: [
 				{
 					text: 'Twitter',
-					url: '//twitter.com/corgux',
+					url: '//twitter.com/idouxui',
 					icon: 'twitter'
 				},
 				{
 					text: 'GitHub',
-					url: '//github.com/corgux',
+					url: '//github.com/idouxui',
 					icon: 'github'
 				},
 				{
 					text: 'SoundCloud',
-					url: '//soundcloud.com/corgux',
+					url: '//soundcloud.com/idouxui',
 					icon: 'soundcloud'
 				},
 				{
-					text: 'WordPress',
-					url: '//profiles.wordpress.org/corgux/#content-plugins',
-					icon: 'wordpress'
-				},
-				{
 					text: 'CodePen',
-					url: '//codepen.io/corgux/',
+					url: '//codepen.io/idouxui/',
 					icon: 'codepen'
 				}
 			]
