@@ -6,7 +6,7 @@ module.exports = {
         config
             .plugin('html')
             .tap((args) => {
-                args[0].title = 'idouxui';
+                args[0].title = 'uxuims';
                 return args;
             });
     }
