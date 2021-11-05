@@ -17,22 +17,22 @@ export default {
 			profiles: [
 				{
 					text: 'Twitter',
-					url: '//twitter.com/idouxui',
+					url: '//twitter.com/uxuims',
 					icon: 'twitter'
 				},
 				{
 					text: 'GitHub',
-					url: '//github.com/idouxui',
+					url: '//github.com/uxuims',
 					icon: 'github'
 				},
 				{
 					text: 'SoundCloud',
-					url: '//soundcloud.com/idouxui',
+					url: '//soundcloud.com/uxuims',
 					icon: 'soundcloud'
 				},
 				{
 					text: 'CodePen',
-					url: '//codepen.io/idouxui/',
+					url: '//codepen.io/uxuims/',
 					icon: 'codepen'
 				}
 			]
