@@ -7,7 +7,7 @@
 			<div class="col-12 text-center">
 				<Profiles />
 			</div>
-			<div class="col-12 text-center">
+			<div class="col-12 text-center mb-5">
 				<Projects />
 			</div>
 		</div>
