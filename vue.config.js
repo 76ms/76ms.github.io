@@ -6,7 +6,7 @@ module.exports = {
         config
             .plugin('html')
             .tap((args) => {
-                args[0].title = 'uxuims';
+                args[0].title = '76ms';
                 return args;
             });
     }
