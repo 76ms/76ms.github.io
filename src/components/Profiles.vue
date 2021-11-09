@@ -26,14 +26,14 @@ export default {
 					icon: 'github'
 				},
 				{
-					text: 'SoundCloud',
-					url: '//soundcloud.com/76ms',
-					icon: 'soundcloud'
-				},
-				{
 					text: 'CodePen',
 					url: '//codepen.io/76ms/',
 					icon: 'codepen'
+				},
+				{
+					text: 'SoundCloud',
+					url: '//soundcloud.com/76ms',
+					icon: 'soundcloud'
 				}
 			]
 		}
