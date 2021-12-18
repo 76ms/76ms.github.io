@@ -105,7 +105,7 @@ h6,
 	}
 
 	@media (min-width: 500px) {
-		max-width: 360px;
+		max-width: 500px;
 		.hide-on-mobile {
 			display: initial;
 		}
