@@ -6,7 +6,7 @@ module.exports = {
         config
             .plugin('html')
             .tap((args) => {
-                args[0].title = '76ms';
+                args[0].title = 'm11t';
                 return args;
             });
     }

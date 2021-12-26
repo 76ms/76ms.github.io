@@ -17,22 +17,22 @@ export default {
 			profiles: [
 				{
 					text: 'Twitter',
-					url: '//twitter.com/_76ms',
+					url: '//twitter.com/_m11t',
 					icon: 'twitter'
 				},
 				{
 					text: 'GitHub',
-					url: '//github.com/76ms',
+					url: '//github.com/m11tweb',
 					icon: 'github'
 				},
 				{
 					text: 'CodePen',
-					url: '//codepen.io/76ms/',
+					url: '//codepen.io/m11t/',
 					icon: 'codepen'
 				},
 				{
 					text: 'SoundCloud',
-					url: '//soundcloud.com/76ms',
+					url: '//soundcloud.com/m11t',
 					icon: 'soundcloud'
 				}
 			]
