@@ -2,7 +2,7 @@
 	<main class="row h-100 align-items-center">
 		<div class="wrapper">
 			<div class="col-12">
-				<Logo />
+				<Avatar />
 			</div>
 			<div class="col-12 text-center">
 				<Profiles />
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo.vue'
+import Avatar from '@/components/Avatar.vue'
 import Projects from '@/components/Projects.vue'
 import Profiles from '@/components/Profiles.vue'
 
 export default {
 	name: 'Home',
 	components: {
-		Logo,
+		Avatar,
 		Projects,
 		Profiles
 	}
