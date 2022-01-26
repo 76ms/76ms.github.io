@@ -16,11 +16,6 @@ export default {
 		return {
 			profiles: [
 				{
-					text: 'Twitter',
-					url: '//twitter.com/_m11t',
-					icon: 'twitter'
-				},
-				{
 					text: 'GitHub',
 					url: '//github.com/m11tweb',
 					icon: 'github'
