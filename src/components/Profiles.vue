@@ -17,7 +17,7 @@ export default {
 			profiles: [
 				{
 					text: 'GitHub',
-					url: '//github.com/m11tweb',
+					url: '//github.com/m11tdev',
 					icon: 'github'
 				},
 				{
