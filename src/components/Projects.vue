@@ -1,11 +1,12 @@
 <template>
-    <div class="projects m-auto">
-        <span v-for="project in projects" :key="project.text" class="px-1 px-md-2 d-inline-block py-1">
-            <a :href="project.url">
-                <img :src="project.img" alt="icon" aria-hidden="true" :class="{'rounded': project.rounded}">&nbsp;{{ project.text }}
-            </a>
-        </span>		
-    </div>
+	<div class="projects m-auto">
+		<span v-for="project in projects" :key="project.text" class="px-1 px-md-2 d-inline-block py-1">
+			<a :href="project.url">
+				<img :src="'.././assets/' + project.img" alt="icon" aria-hidden="true" :class="{'rounded': project.rounded}" />
+				&nbsp;{{project.text}}
+			</a>
+		</span>
+	</div>
 </template>
 
 <script>
@@ -15,11 +16,17 @@ export default {
 		return {
 			projects: [
 				{
+					text: 'Ghosting',
+					url: '/ghosting',
+					img: 'ghosting.png',
+					rounded: true,
+					bullet: true
+				},
+				{
 					text: 'WordMap',
 					url: '/word-map',
 					img: 'word-map.png',
-					rounded: true,
-					bullet: true
+					rounded: true
 				},
 				{
 					text: 'PhotoViewer',
@@ -29,15 +36,12 @@ export default {
 				{
 					text: 'Safe Plants for Cats',
 					url: '/safe-plants-for-cats',
-					img: 'safe-plants-for-cats.png',
-					bullet: true,
-					hideOnMobile: true
+					img: 'safe-plants-for-cats.png'
 				},
 				{
 					text: 'Gifstori',
 					url: '/gifstori',
-					img: 'gifstori.png',
-					bullet: true
+					img: 'gifstori.png'
 				}
 			],
 		}

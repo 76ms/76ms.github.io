@@ -20,7 +20,7 @@ import Projects from '@/components/Projects.vue'
 import Profiles from '@/components/Profiles.vue'
 
 export default {
-	name: 'Home',
+	name: 'HomePage',
 	components: {
 		Avatar,
 		Projects,

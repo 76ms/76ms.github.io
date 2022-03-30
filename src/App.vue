@@ -1,12 +1,16 @@
 <template>
 	<div id="app">
-		<router-view />
+		<HomePage />
 	</div>
 </template>
 
 <script>
+import HomePage from './views/Home.vue'
 export default {
-	name: 'App'
+	name: 'App',
+	components: {
+		HomePage
+	}
 }
 </script>
 
@@ -105,7 +109,7 @@ h6,
 	}
 
 	@media (min-width: 500px) {
-		max-width: 500px;
+		max-width: 580px;
 		.hide-on-mobile {
 			display: initial;
 		}
