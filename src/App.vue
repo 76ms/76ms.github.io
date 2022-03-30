@@ -17,7 +17,7 @@ export default {
 <style lang="scss">
 body {
 	color: #232323;
-	background: white url("/triangles.png");
+	background: white url("./assets/triangles.png");
 	background-size: cover;
 	background-position: center;
 	font-family: sans-serif;

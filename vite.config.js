@@ -7,7 +7,6 @@ export default defineConfig(({command}) => {
 
   return {
     plugins: [vue()],
-    base: command === 'build' ? '/template-app/' : '/',
     build: {
       outDir: 'docs'
     },

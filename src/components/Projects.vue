@@ -2,7 +2,7 @@
 	<div class="projects m-auto">
 		<span v-for="project in projects" :key="project.text" class="px-1 px-md-2 d-inline-block py-1">
 			<a :href="project.url">
-				<img :src="'.././assets/' + project.img" alt="icon" aria-hidden="true" :class="{'rounded': project.rounded}" />
+				<img :src="project.img" alt="icon" aria-hidden="true" :class="{'rounded': project.rounded}" />
 				&nbsp;{{project.text}}
 			</a>
 		</span>
@@ -18,30 +18,28 @@ export default {
 				{
 					text: 'Ghosting',
 					url: '/ghosting',
-					img: 'ghosting.png',
-					rounded: true,
-					bullet: true
+					img: new URL('./../assets/ghosting.png', import.meta.url).href
 				},
 				{
 					text: 'WordMap',
 					url: '/word-map',
-					img: 'word-map.png',
+					img: new URL('./../assets/word-map.png', import.meta.url).href,
 					rounded: true
 				},
 				{
 					text: 'PhotoViewer',
 					url: '/photos',
-					img: 'photo-viewer.png'
+					img: new URL('./../assets/photo-viewer.png', import.meta.url).href
 				},
 				{
 					text: 'Safe Plants for Cats',
 					url: '/safe-plants-for-cats',
-					img: 'safe-plants-for-cats.png'
+					img: new URL('./../assets/safe-plants-for-cats.png', import.meta.url).href
 				},
 				{
 					text: 'Gifstori',
 					url: '/gifstori',
-					img: 'gifstori.png'
+					img: new URL('./../assets/gifstori.png', import.meta.url).href
 				}
 			],
 		}
