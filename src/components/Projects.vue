@@ -15,11 +15,11 @@ export default {
 	data () {
 		return {
 			projects: [
-                {
-					text: 'Squash List',
-					url: '//www.squashlist.info',
-					img: new URL('./../assets/squashlist.svg', import.meta.url).href
-				},
+                // {
+				// 	text: 'Squash List',
+				// 	url: '//www.squashlist.info',
+				// 	img: new URL('./../assets/ghosting.png', import.meta.url).href
+				// },
                 {
 					text: 'Ghosting',
 					url: '/ghosting',
@@ -45,7 +45,12 @@ export default {
 					text: 'Gifstori',
 					url: '/gifstori',
 					img: new URL('./../assets/gifstori.png', import.meta.url).href
-				}
+				},
+                {
+					text: 'Squash List',
+					img: new URL('./../assets/squashlist.png', import.meta.url).href,
+					url: '//www.squashlist.info',
+				},
 			],
 		}
 	}
