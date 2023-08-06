@@ -15,7 +15,12 @@ export default {
 	data () {
 		return {
 			projects: [
-				{
+                {
+					text: 'Squash List',
+					url: '//www.squashlist.info',
+					img: new URL('./../assets/squashlist.svg', import.meta.url).href
+				},
+                {
 					text: 'Ghosting',
 					url: '/ghosting',
 					img: new URL('./../assets/ghosting.png', import.meta.url).href
